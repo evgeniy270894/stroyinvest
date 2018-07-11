@@ -1,0 +1,160 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1200px
++media-breakpoint-down(xl)
+
+//Large: ≥992px
++media-breakpoint-down(lg)
+	.left-sidebar
+		img
+			width: 100%
+	.top-nav
+		&_menu
+			li
+				margin-right: 38px
+
+
+//Medium: ≥768px
++media-breakpoint-down(md)
+
+
+	html
+		font-size: 7px
+	.top-nav
+		position: relative
+		padding: 12px 15px
+		&_menu-btn
+  		display: block
+		&_menu
+			flex-direction: column
+			align-items: center
+			align-items: stretch
+			transition: 0.5s all
+			margin-bottom: 0
+			li
+				margin-right: 0
+				a
+					display: block
+					text-align: center
+					line-height: 45px
+					&::after
+						display: none
+			&__active
+				display: flex
+	.top-nav_menu-slide
+  	display: none
+  	position: absolute
+  	top: 78px
+  	left: 50%
+  	transform: translateX(-50%);
+  	background-color: $white
+  	z-index: 98
+  	width: 100%	
+
+	.left-sidebar
+		z-index: 10
+		position: relative
+		&_btn
+			display: block
+		&_menu
+		  top: 55px
+		  left: 50%
+		  transform: translateX(-50%)
+		  background-color: #fff
+		  width: 100%
+		  display: none
+		 	position: absolute
+		&_object
+			display: none
+
+	.content
+		h2
+			margin-top: 3rem
+	.footer
+		text-align: center
+		small
+			margin: 4.6rem auto
+		ul
+			text-align: left
+			padding: 0 0 0 30px
+		&-contacts
+			text-align: right
+			margin-top: 4rem
+		&-social-links
+			ul
+				justify-content: right
+				padding: 0
+				li
+					&:first-child
+						margin: 0
+	.team
+		img
+			width: 100%
+
+
+
+//Small: ≥576px
++media-breakpoint-down(sm)
+	.team
+		img
+			width: 60%
+			margin: 0 auto
+		&_item__img
+			margin-bottom: 20px
+	.footer
+		&-contacts
+			text-align: center
+			margin-top: 4rem
+		&-social-links
+			ul
+				justify-content: center
+	.calc
+		&_information
+			display: none
+		&_information-bottom
+			display: block
+		&_summ
+			margin-bottom: 20px
+			h4
+				font-size: 22px
+
+
+@media (max-width: 480px)
+	.directions
+		&-block
+			margin: 0
+
+
+@media (max-width: 375px)
+	.footer
+		ul
+			padding-left: 10px
+
+
+//Extra small: >0
++media-breakpoint-down(xs)
+
+
+
+
+
+/*==========  Mobile First  ==========*/
+
+//Extra small: <576px
++media-breakpoint-up(xs)
+
+//Small: ≤576px
++media-breakpoint-up(sm)
+
+//Medium: ≤768px
++media-breakpoint-up(md)
+
+//Large: ≤992px
++media-breakpoint-up(lg)
+
+//Extra large: ≤1200px
++media-breakpoint-up(xl)
